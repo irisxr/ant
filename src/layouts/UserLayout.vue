@@ -1,6 +1,5 @@
 <template>
     <div>
-        ant design vue
         <router-view></router-view>
     </div>
 </template>
