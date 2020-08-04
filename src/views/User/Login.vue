@@ -12,7 +12,6 @@
 
 <script>
   import request from "../../utils/request";
-  import { notification } from "ant-design-vue";
 
   export default {
     data() {
@@ -36,10 +35,6 @@
             this.$cookies.set("token", res.data.token);
             this.$router.push({
               name: "analysis"
-            });
-          } else {
-            notification.open({
-              message: "用戶名或密码错误"
             });
           }
         });
