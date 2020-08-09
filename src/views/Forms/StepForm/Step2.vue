@@ -35,14 +35,13 @@
     },
     methods: {
       handleSubmit() {
-        const {$router,$store} = this;
+        const {$store,step} = this;
         this.form.validateFields((err, values) => {
           if (!err) {
             $store.dispatch({
               type:'form/submitStepForm',
-              payload:values
+              payload:{...step,...values}
             })
-            $router.push('/form/step-form/result')
           }
         });
       },

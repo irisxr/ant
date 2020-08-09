@@ -1,5 +1,5 @@
 <template>
-    <div>分布表单
+    <div>
         <router-view></router-view>
     </div>
 </template>
