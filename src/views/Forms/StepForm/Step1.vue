@@ -27,11 +27,15 @@
       }
     },
     methods: {
-      handleSubmit(e) {
-        e.preventDefault();
+      handleSubmit() {
+       const {$router,$store} = this;
         this.form.validateFields((err, values) => {
           if (!err) {
-            console.log('Received values of form: ', values);
+            $store.commit({
+              type:'form/saveStepFormData',
+              payload:values
+            })
+            $router.push('/form/step-form/confirm')
           }
         });
       },

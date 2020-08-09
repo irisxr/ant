@@ -70,7 +70,7 @@
           })
         }else if(data=="stepForm"){
           this.$router.push({
-            name:'stepform'
+            name:'info'
           })
         }
       }

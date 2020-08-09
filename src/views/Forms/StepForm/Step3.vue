@@ -1,5 +1,5 @@
 <template>
-    <div>第三步</div>
+    <div>转账成功，预计两小时内到账！</div>
 </template>
 
 <script>
