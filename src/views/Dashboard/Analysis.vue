@@ -36,7 +36,7 @@
         }).then(response => {
           this.chartOption = {
             title: {
-              text: "ECharts 入门示例"
+              text: this.$t('lang.title')
             },
             tooltip: {},
             xAxis: {

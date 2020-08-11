@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import VueCookies from "vue-cookies";
 import axios from "axios";
+import Vue18n from "vue-i18n";
 import { Button, Layout, Icon, Drawer, Radio, Menu, Form, Input, notification } from "ant-design-vue";
 
 Vue.config.productionTip = false;
@@ -61,7 +62,17 @@ Vue.use(Menu);
 Vue.use(Form);
 Vue.use(Input);
 Vue.use(VueCookies);
+Vue.use(Vue18n);
+
+const i18n = new Vue18n({
+  locale:localStorage.lang ||'zh-CN',
+  messages:{
+    'zh-CN':require('./common/lang/cn'),
+    'en-US':require('./common/lang/en')
+  }
+})
 new Vue({
+  i18n,
   router,
   store,
   render: h => h(App)

@@ -10,7 +10,7 @@ const state = {
 const  actions= {
   async submitStepForm({commit},{payload}){
     await request({
-      url:'http://localhost:8082/api/form',
+      url:'http://localhost:8081/api/form',
       method:'POST',
       data:payload
     });
